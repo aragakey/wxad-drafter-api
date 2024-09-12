@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Drafter 后端
 
-## Getting Started
+基于 nextjs serverless function
 
-First, run the development server:
+https://wxad.design/drafter/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## check
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+请你根据我提供的规则对以下文本进行错别字、语法错误以及符号使用的检查。你只需要标出错误并解释原因，而不进行美化或修改。规则列表如下：
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. 中英文之间需要加空格
+   错误示例：这是一个example。
+   正确示例：这是一个 example。
+2. 中文与数字之间需要加空格
+    错误示例：这是一个100元的商品。
+    正确示例：这是一个 100 元的商品。
+3. 每句话的结尾如果没有句号，需要加句号。如果有其他标点符号，句号可以省略
+    错误示例：这是一个 example
+    正确示例：这是一个 example。
+    正确示例：这是一个 example；
+4. 标点符号的使用需要符合中文规范
+    错误示例：这是一个错误使用半角逗号,和句号的例子.
+    正确示例：这是一个正确使用半角逗号，和句号的例子。
+5. 引号使用需要符合中文规范
+    错误示例：这是一个错误使用‘半角引号’的例子。
+    正确示例：这是一个正确使用“半角引号”的例子。
+6. 检查错别字
+    错误示例：这是一个有错别字的列子。
+    正确示例：这是一个没有错别字的例子。
+7. 检查句子结构和常见的语法错误（如主谓宾搭配不当）。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+文本：
