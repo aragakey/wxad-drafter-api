@@ -5,8 +5,6 @@
 // })
 
 import OpenAI from "openai"
-const openai = new OpenAI()
-
 export const dynamic = "force-dynamic" // 默认是静态，除非读取请求
 
 export async function OPTIONS(request: Request) {
@@ -21,6 +19,7 @@ export async function OPTIONS(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const openai = new OpenAI()
   // 获取 query params 的 text 参数
   const text = new URL(request.url).searchParams.get("text")
 
