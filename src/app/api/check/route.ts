@@ -15,13 +15,13 @@ export async function OPTIONS(request: Request) {
     status: 204, // No Content
     headers: {
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, OPTIONS",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
     },
   })
 }
 
-export async function GET(request: Request) {
+export async function POST(request: Request) {
   // 获取 query params 的 text 参数
   const text = new URL(request.url).searchParams.get("text")
 
